@@ -46,4 +46,11 @@ func main() {
 	fmt.Println("My Slice 2: ", my_slice_2)
 	fmt.Println("My Slice 3: ", my_slice_3)
 	fmt.Println("My Slice 4: ", my_slice_4)
+
+	//append
+	fmt.Println("\n***Append***")
+	arr1 := append(arr, "append")
+	fmt.Println(arr1)
+	arr2 := append(student[:15], "append")
+	fmt.Println(arr2)
 }
