@@ -2,6 +2,11 @@ package main
 
 import "fmt"
 
+type Employee struct {
+	firstName, lastName string
+	age, salary         int
+}
+
 func main() {
 	// assign array
 	var student [15]string // or
@@ -53,4 +58,12 @@ func main() {
 	fmt.Println(arr1)
 	arr2 := append(student[:15], "append")
 	fmt.Println(arr2)
+
+	//struct
+	emp8 := &Employee{"Sam", "Anderson", 55, 6000}
+
+	// (*emp8).firstName is the syntax to access
+	// the firstName field of the emp8 struct
+	fmt.Println("First Name:", emp8.firstName)
+	fmt.Println("Age:", (*emp8).age) //pointer
 }
