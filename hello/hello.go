@@ -66,4 +66,32 @@ func main() {
 	// the firstName field of the emp8 struct
 	fmt.Println("First Name:", emp8.firstName)
 	fmt.Println("Age:", (*emp8).age) //pointer
+
+	//Map
+	map_1 := map[int]string{
+
+		90: "Dog",
+		91: "Cat",
+		92: "Cow",
+		93: "Bird",
+		94: "Rabbit",
+	}
+	fmt.Println("Map-1: ", map_1)
+	map_1[90] = "Zebra"
+	fmt.Println("Map-1: ", map_1[90])
+	//or
+	var My_map = make(map[float64]string)
+	My_map[1.3] = "Rohit"
+	My_map[1.5] = "Sumit"
+	fmt.Println(My_map)
+	//check the existence of the key in the map
+	pet, ok := map_1[94]
+	fmt.Println("\nKey present or not:", ok)
+	fmt.Println("Value:", pet)
+	pet2, ok1 := map_1[95]
+	fmt.Println("\nKey present or not:", ok1)
+	fmt.Println("Value:", pet2)
+	//delete in map
+	delete(map_1, 92)
+	fmt.Println("Map-1 after delete :", map_1)
 }
